@@ -51,7 +51,7 @@ module Data.Memory.Internal.CompatPrim64
     ) where
 
 
-#if WORD_SIZE_IN_BITS == 64
+#if WORD_SIZE_IN_BITS == 64 || defined(ghcjs_HOST_OS)
 import GHC.Prim hiding (Word64#, Int64#)
 
 #if __GLASGOW_HASKELL__ >= 708
